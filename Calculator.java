@@ -10,7 +10,7 @@
          //ToDo
      }
 
-     private float subsfloat x, float y() {
+     private float subs (float x, float y) {
          float result = 0.0;
          //ToDo
      }
