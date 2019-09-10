@@ -2,7 +2,7 @@
  
  public class Calculator {
 
-     private float sum(float x, float y) {
+     private static float sum(float x, float y) {
          float result = 0.0f;
          
          result = x + y;
@@ -10,7 +10,7 @@
 
      }
 
-     private float mult(float x, float y) {
+     private static float mult(float x, float y) {
          float result = 0.0f;
         
          result = x * y;
@@ -18,47 +18,41 @@
 
      }
 
-     private float subs (float x, float y) {
+     private static float subs (float x, float y) {
          float result = 0.0f;
          
          result = x - y;
          return result;
      }
 
-     private float mod(float x, float y) {
+     private static float mod(float x, float y) {
          float result = 0.0f;
         
          result = x % y;
          return result;
      }
 
-     private float div(float x, float y) {
+     private static float div(float x, float y) {
          float result = 0.0f;
          result = x / y;
          return result;
      }
      
      
-     public void name(String[] args) {
+     public static void main(String[] args) {
         
-        String a = args[0];
-        String b = args[1];
-
-        float x = Float.parseFloat(a);
-        float y = Float.parseFloat(b);
+        float x = Float.parseFloat(args[0]);
+        float y = Float.parseFloat(args[1]);
 
          System.out.println("Numero 1: " + x);
          System.out.println("Numero 2 : " + y);
-         System.out.println("Suma = " + this.sum(x, y));
-         System.out.println("Multiplicacion = " + this.mult(x, y));
-         System.out.println("Resta = " + this.subs(x, y));
-         System.out.println("Division = " + this.div(x, y));
-         System.out.println("Modulo = " + this.mod(x, y));
+         System.out.println("Suma = " + sum(x, y));
+         System.out.println("Multiplicacion = " + mult(x, y));
+         System.out.println("Resta = " + subs(x, y));
+         System.out.println("Division = " + div(x, y));
+         System.out.println("Modulo = " + mod(x, y));
+
      }
     
-     public static void main(String[] args) {
-
-     
-         
-     }
+   
 }
